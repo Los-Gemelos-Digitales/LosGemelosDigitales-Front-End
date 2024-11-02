@@ -1,0 +1,52 @@
+.app-toolbar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #C28C0F; /* Color de fondo */
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.app-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-options {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px; 
+}
+
+.nav-options a {
+  margin-right: 15px; 
+  text-decoration: none;
+  color: #000;
+  cursor: pointer; 
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-icon,
+.notification-icon {
+  height: 30px;
+  margin-left: 15px;
+}
