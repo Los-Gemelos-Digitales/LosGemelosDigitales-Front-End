@@ -1,1 +1,21 @@
-<p>Calendar</p>
+<div class="planning-container">
+    <h2>Calendar</h2>
+    <div class="calendar-event-section">
+      <div class="calendar">
+        <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+      </div>
+  
+      <div class="events">
+        <h3>{{ month }}</h3>
+        <div *ngFor="let event of events" class="event">
+          <div class="event-date">{{ event.date | date: 'dd' }}</div>
+          <div class="event-details">
+            <h4>{{ event.title }}</h4>
+            <p>Hora: {{ event.time }}</p>
+            <p>Estado: {{ event.status }}</p>
+            <p *ngIf="event.details">{{ event.details }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

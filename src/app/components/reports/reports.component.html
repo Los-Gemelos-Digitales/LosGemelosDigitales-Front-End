@@ -1,1 +1,27 @@
-<p>Table of reports</p>
+<div class="reports-container">
+    <h2>Table of reports</h2>
+    
+    <table class="reports-table">
+      <thead>
+        <tr>
+          <th>TITLE</th>
+          <th>DESCRIPTION</th>
+          <th>TIME</th>
+          <th>DAY</th>
+          <th>PLACE</th>
+          <th>DETAILS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of reports">
+          <td>{{ report.title }}</td>
+          <td>{{ report.description }}</td>
+          <td>{{ report.time }}</td>
+          <td>{{ report.day }}</td>
+          <td>{{ report.place }}</td>
+          <td><a href="#" class="details-link">SEE DETAILS</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

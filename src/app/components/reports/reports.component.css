@@ -1,6 +1,52 @@
 :host {
-    display: block;
-    background-color: #E6CA8A; 
-    height: 100vh; 
-    padding: 20px; 
+  display: block;
+  background-color: #E6CA8A; 
+  height: 100vh; 
+  padding: 20px;
+}
+
+.reports-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.reports-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reports-table th, .reports-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #444;
+}
+
+.reports-table th {
+  background-color: #555;
+}
+
+.details-link {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.details-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .reports-table {
+    font-size: 14px;
   }
+
+  .reports-table th, .reports-table td {
+    padding: 8px;
+  }
+}
