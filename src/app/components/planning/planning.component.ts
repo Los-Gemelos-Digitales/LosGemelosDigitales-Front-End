@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
+import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 @Component({
   selector: 'app-planning',
   standalone: true,
   templateUrl: './planning.component.html',
   styleUrls: ['./planning.component.css'],
-  imports: [MatDatepickerModule, MatNativeDateModule, CommonModule] // Añade CommonModule a los imports
+  imports: [MatDatepickerModule, MatNativeDateModule, CommonModule, ToolbarComponent] // Añade CommonModule a los imports
 })
 export class PlanningComponent {
   month = 'January';
