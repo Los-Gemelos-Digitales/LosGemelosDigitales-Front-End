@@ -1,0 +1,8 @@
+<div class="notification-panel" *ngIf="isOpen">
+    <h3>Notifications</h3>
+    <div class="notification-item" *ngFor="let notification of notifications">
+      <div class="notification-date">{{ notification.date }}</div>
+      <div class="notification-message">{{ notification.message }}</div>
+    </div>
+  </div>
+  

@@ -6,7 +6,7 @@
       </div>
       <div class="profile-section">
         <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-bell" (click)="notificationPanel.togglePanel()"></i>
       </div>
     </div>
     <nav class="nav-options">
@@ -15,3 +15,5 @@
       <a routerLink="/planning">Planning</a>
     </nav>
   </header>
+
+  <app-notification-panel #notificationPanel></app-notification-panel>
