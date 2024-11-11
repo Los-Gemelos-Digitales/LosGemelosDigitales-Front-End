@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "user1@example.com",
+      "username": "user1",
+      "password": "password123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "email": "user2@example.com",
+      "username": "user2",
+      "password": "securepass456",
+      "role": "viewer"
+    },
+    {
+      "id": 3,
+      "email": "user3@example.com",
+      "username": "user3",
+      "password": "mypassword789",
+      "role": "viewer"
+    },
+    {
+      "id": 4,
+      "email": "user4@example.com",
+      "username": "user4",
+      "password": "pass1234",
+      "role": "viewer"
+    },
+    {
+      "id": 5,
+      "email": "user5@example.com",
+      "username": "user5",
+      "password": "password5678",
+      "role": "viewer"
+    }
+  ]
+}
