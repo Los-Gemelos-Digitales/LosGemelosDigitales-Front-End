@@ -1,13 +1,19 @@
-:host {
+/* :host {
   display: block;
   background-color: #E6CA8A; 
   height: 100vh; 
   padding: 20px;
-}
+} */
 
 .reports-container {
-  text-align: center;
+  /* text-align: center;
   font-family: Arial, sans-serif;
+  background-color: #E6CA8A; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E6CA8A;
+  padding: 20px;
 }
 
 .reports-table {
