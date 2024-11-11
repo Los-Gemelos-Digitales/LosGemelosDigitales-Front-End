@@ -1,8 +1,13 @@
-<div class="notification-panel" *ngIf="isOpen">
+<div class="notification-panel" [class.show]="isOpen">
+  <div class="notification-header">
     <h3>Notifications</h3>
-    <div class="notification-item" *ngFor="let notification of notifications">
-      <div class="notification-date">{{ notification.date }}</div>
-      <div class="notification-message">{{ notification.message }}</div>
+    <i class="fa-solid fa-xmark close-icon" (click)="togglePanel()"></i> 
+  </div>
+  <div *ngFor="let group of groupedNotifications">
+    <div class="notification-date">{{ group.date }}</div>
+    <div *ngFor="let message of group.messages" class="notification-item">
+      <i class="fa-solid fa-light-emergency-on"></i> 
+      <span class="notification-message">{{ message }}</span>
     </div>
   </div>
-  
+</div>

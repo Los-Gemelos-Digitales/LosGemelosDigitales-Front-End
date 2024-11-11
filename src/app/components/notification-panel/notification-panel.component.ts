@@ -10,10 +10,16 @@ import { CommonModule } from '@angular/common';
 })
 export class NotificationPanelComponent {
   isOpen = false;
-  notifications = [
-    { date: 'Today', message: 'Alert 1' },
-    { date: '23/02/2024', message: 'Alert 2' },
-    { date: '23/02/2024', message: 'Alert 3' }
+
+  groupedNotifications = [
+    {
+      date: 'Today',
+      messages: ['Alert 1']
+    },
+    {
+      date: '23/02/2024',
+      messages: ['Alert 2', 'Alert 3']
+    }
   ];
 
   togglePanel() {
