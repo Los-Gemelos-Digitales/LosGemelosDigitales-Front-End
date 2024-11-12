@@ -1,19 +1,18 @@
 <header class="app-toolbar">
-    <div class="top-section">
-      <div class="brand-section">
-        <img class="brand-logo" src="https://i.postimg.cc/ryH6sM4k/logo.png" alt="logo" aria-hidden="true" />
-        <span class="app-name">TWINGUARD EDUCATION</span>
-      </div>
-      <div class="profile-section">
-        <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-bell" (click)="notificationPanel.togglePanel()"></i>
-      </div>
+  <div class="top-section">
+    <div class="brand-section">
+      <img class="brand-logo" src="https://i.postimg.cc/ryH6sM4k/logo.png" alt="logo" aria-hidden="true" />
+      <span class="app-name">TWINGUARD EDUCATION</span>
     </div>
-    <nav class="nav-options">
-      <a routerLink="/monitoring">Monitoring</a>
-      <a routerLink="/reports">Reports</a>
-      <a routerLink="/planning">Planning</a>
-    </nav>
-  </header>
-
-  <app-notification-panel #notificationPanel></app-notification-panel>
+    <div class="profile-section">
+      <i class="fa-solid fa-user"></i>
+      <i class="fa-solid fa-bell" (click)="notificationPanel.togglePanel()"></i>
+    </div>
+  </div>
+  <nav class="nav-options">
+    <a routerLink="/monitoring">Monitoring</a>
+    <a *ngIf="userRole === 'admin'" routerLink="/reports">Reports</a>
+    <a *ngIf="userRole === 'admin'" routerLink="/planning">Planning</a>
+  </nav>
+</header>
+<app-notification-panel #notificationPanel></app-notification-panel>

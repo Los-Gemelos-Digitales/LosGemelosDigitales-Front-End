@@ -1,28 +1,52 @@
+
+<body class="app-background">
 <app-toolbar></app-toolbar>
 <div class="reports-container">
-    <h2>Table of reports</h2>
-    
-    <table class="reports-table">
-      <thead>
-        <tr>
-          <th>TITLE</th>
-          <th>DESCRIPTION</th>
-          <th>TIME</th>
-          <th>DAY</th>
-          <th>PLACE</th>
-          <th>DETAILS</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let report of reports">
-          <td>{{ report.title }}</td>
-          <td>{{ report.description }}</td>
-          <td>{{ report.time }}</td>
-          <td>{{ report.day }}</td>
-          <td>{{ report.place }}</td>
-          <td><a href="#" class="details-link">SEE DETAILS</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+  <h2>Table of Reports</h2>
+
+  <table mat-table [dataSource]="reports" class="mat-elevation-z8">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let report"> {{ report.id }} </td>
+    </ng-container>
+
+    <!-- Type Column -->
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> TYPE </th>
+      <td mat-cell *matCellDef="let report"> {{ report.type }} </td>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> DESCRIPTION </th>
+      <td mat-cell *matCellDef="let report"> {{ report.description }} </td>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> DATE </th>
+      <td mat-cell *matCellDef="let report"> {{ report.date }} </td>
+    </ng-container>
+
+    <!-- Place Column -->
+    <ng-container matColumnDef="place">
+      <th mat-header-cell *matHeaderCellDef> PLACE </th>
+      <td mat-cell *matCellDef="let report"> {{ report.place }} </td>
+    </ng-container>
+
+    <!-- Details Column -->
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef> DETAILS </th>
+      <td mat-cell *matCellDef="let report">
+        <button mat-button class="details-button">SEE DETAILS</button>
+      </td>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+</body>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
+import {AuthService} from '../../shared/auth/auth.service';
 
 @Component({
   selector: 'app-monitoring',
@@ -9,5 +10,14 @@ import { ToolbarComponent } from '../toolbar/toolbar.component';
   styleUrl: './monitoring.component.css'
 })
 export class MonitoringComponent {
+  username: string | null = null;
 
+  constructor(private authService: AuthService) {}
+
+  ngOnInit() {
+    const user = this.authService.getUser(); // Obtener el usuario desde el AuthService
+    if (user) {
+      this.username = user.username; // Asignar el username
+    }
+  }
 }
