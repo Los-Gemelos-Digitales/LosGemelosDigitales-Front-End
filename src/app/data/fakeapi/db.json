@@ -35,5 +35,185 @@
       "password": "password5678",
       "role": "viewer"
     }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "admin_id": 1,
+      "type": "Fire",
+      "description": "Fire reported in the main building",
+      "date": "2024-11-10",
+      "place": "Main Building"
+    },
+    {
+      "id": 2,
+      "admin_id": 1,
+      "type": "Earthquake",
+      "description": "Earthquake drill conducted",
+      "date": "2024-11-05",
+      "place": "Office HQ"
+    },
+    {
+      "id": 3,
+      "admin_id": 1,
+      "type": "Flood",
+      "description": "Flood reported in the parking area",
+      "date": "2024-11-03",
+      "place": "Parking Area"
+    },
+    {
+      "id": 4,
+      "admin_id": 1,
+      "type": "Fire",
+      "description": "Fire incident in the kitchen",
+      "date": "2024-10-25",
+      "place": "Kitchen"
+    },
+    {
+      "id": 5,
+      "admin_id": 1,
+      "type": "Earthquake",
+      "description": "Earthquake damage assessment in sector A",
+      "date": "2024-10-21",
+      "place": "Sector A"
+    },
+    {
+      "id": 6,
+      "admin_id": 1,
+      "type": "Flood",
+      "description": "Flooding on the second floor",
+      "date": "2024-09-30",
+      "place": "Second Floor"
+    },
+    {
+      "id": 7,
+      "admin_id": 1,
+      "type": "Fire",
+      "description": "Fire drill held in all offices",
+      "date": "2024-09-28",
+      "place": "All Offices"
+    },
+    {
+      "id": 8,
+      "admin_id": 1,
+      "type": "Earthquake",
+      "description": "Minor earthquake felt but no damage",
+      "date": "2024-09-15",
+      "place": "Reception"
+    },
+    {
+      "id": 9,
+      "admin_id": 1,
+      "type": "Flood",
+      "description": "Heavy rainfall caused water leakage",
+      "date": "2024-09-10",
+      "place": "Ground Floor"
+    },
+    {
+      "id": 10,
+      "admin_id": 1,
+      "type": "Fire",
+      "description": "Fire alarm triggered due to malfunction",
+      "date": "2024-08-20",
+      "place": "Storage Room"
+    },
+    {
+      "id": 11,
+      "admin_id": 1,
+      "type": "Earthquake",
+      "description": "Simulated earthquake evacuation drill",
+      "date": "2024-08-10",
+      "place": "Building 1"
+    },
+    {
+      "id": 12,
+      "admin_id": 1,
+      "type": "Flood",
+      "description": "Flooding in the basement after storm",
+      "date": "2024-07-28",
+      "place": "Basement"
+    },
+    {
+      "id": 13,
+      "admin_id": 1,
+      "type": "Fire",
+      "description": "Small fire caused by electrical fault",
+      "date": "2024-07-15",
+      "place": "Server Room"
+    },
+    {
+      "id": 14,
+      "admin_id": 1,
+      "type": "Earthquake",
+      "description": "Magnitude 4.5 earthquake felt",
+      "date": "2024-06-30",
+      "place": "Parking Lot"
+    },
+    {
+      "id": 15,
+      "admin_id": 1,
+      "type": "Flood",
+      "description": "Water leak in the west wing",
+      "date": "2024-06-20",
+      "place": "West Wing"
+    },
+    {
+      "id": 16,
+      "admin_id": 1,
+      "type": "Fire",
+      "description": "Burnt cables in the storage room",
+      "date": "2024-06-10",
+      "place": "Storage Room"
+    },
+    {
+      "id": 17,
+      "admin_id": 1,
+      "type": "Earthquake",
+      "description": "No major damage after the tremor",
+      "date": "2024-05-15",
+      "place": "All Floors"
+    },
+    {
+      "id": 18,
+      "admin_id": 1,
+      "type": "Flood",
+      "description": "Water damage in the office lobby",
+      "date": "2024-05-10",
+      "place": "Lobby"
+    },
+    {
+      "id": 19,
+      "admin_id": 1,
+      "type": "Fire",
+      "description": "Fire extinguisher needed in the kitchen",
+      "date": "2024-04-25",
+      "place": "Kitchen"
+    },
+    {
+      "id": 20,
+      "admin_id": 1,
+      "type": "Earthquake",
+      "description": "Training for emergency protocols during earthquake",
+      "date": "2024-04-15",
+      "place": "Training Room"
+    }
+  ],
+  "evacuation_plans": [
+    {
+      "id": 1,
+      "admin_id": 1,
+      "date": "2024-12-01",
+      "title": "Fire Drill Evacuation",
+      "time": "10:00 AM",
+      "description": "Planned fire drill evacuation in all buildings"
+    },
+    {
+      "id": 2,
+      "admin_id": 1,
+      "date": "2024-12-15",
+      "title": "Earthquake Evacuation Plan",
+      "time": "2:00 PM",
+      "description": "Earthquake evacuation for HQ building"
+    }
   ]
 }

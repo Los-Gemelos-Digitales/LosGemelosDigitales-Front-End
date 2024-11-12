@@ -1,58 +1,89 @@
-/* :host {
-  display: block;
-  background-color: #E6CA8A; 
-  height: 100vh; 
-  padding: 20px;
-} */
-
-.reports-container {
-  /* text-align: center;
-  font-family: Arial, sans-serif;
-  background-color: #E6CA8A; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.app-background {
   background-color: #E6CA8A;
+  min-height: 100vh;
+
+}
+.reports-container {
   padding: 20px;
+  margin: 20px;
+  background-color: #1E1E1E;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.reports-table {
+h2 {
+  color: #F4511E; /* Color de seguridad */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Tabla de reportes */
+table {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
   border-collapse: collapse;
-  background-color: #333;
-  color: #fff;
+  margin-top: 10px;
+}
+
+.mat-elevation-z8 {
+  background-color: #252525;
+  color: #E0E0E0;
   border-radius: 8px;
   overflow: hidden;
 }
 
-.reports-table th, .reports-table td {
-  padding: 12px;
+th, td {
+  padding: 12px 15px;
   text-align: left;
-  border: 1px solid #444;
+  border-bottom: 1px solid #3C3C3C;
 }
 
-.reports-table th {
-  background-color: #555;
-}
-
-.details-link {
-  color: #ffcc00;
-  text-decoration: none;
+th {
+  background-color: #333;
+  color: #FFAB91;
   font-weight: bold;
 }
 
-.details-link:hover {
+td {
+  color: #E0E0E0;
+}
+
+/* Detalles del botón */
+.details-button {
+  color: #FF5722;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.details-button:hover {
+  color: #FFAB91;
   text-decoration: underline;
 }
 
+/* Estilos de hover para filas */
+tr:hover {
+  background-color: #333333;
+}
+
+/* Enfoque de accesibilidad */
+.details-button:focus,
+tr:focus {
+  outline: 2px solid #FF5722;
+  outline-offset: 2px;
+}
+
+/* Estilos específicos de accesibilidad */
 @media (max-width: 768px) {
-  .reports-table {
-    font-size: 14px;
+  .reports-container {
+    padding: 10px;
+    margin: 10px;
   }
 
-  .reports-table th, .reports-table td {
-    padding: 8px;
+  h2 {
+    font-size: 1.5em;
+  }
+
+  th, td {
+    padding: 8px 10px;
   }
 }
