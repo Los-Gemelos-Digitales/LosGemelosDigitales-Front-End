@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
-import {AuthService} from '../../shared/auth/auth.service';
+import {AuthService} from '../../shared/auth-service/auth.service';
 
 @Component({
   selector: 'app-monitoring',
