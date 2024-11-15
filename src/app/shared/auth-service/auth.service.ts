@@ -38,4 +38,8 @@ export class AuthService {
   private clearUser(): void {
     localStorage.removeItem(this.currentUserKey);
   }
+
+  isAuthenticated(): boolean {
+    return this.getUser() !== null;
+  }
 }

@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NotificationPanelComponent } from '../notification-panel/notification-panel.component';
 import {AuthService} from '../../shared/auth-service/auth.service';
 import {CommonModule} from '@angular/common';
+import {AuthGuard} from '@angular/fire/auth-guard';
 
 @Component({
   selector: 'app-toolbar',
