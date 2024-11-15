@@ -1,22 +1,57 @@
+<body class="app-background">
 <app-toolbar></app-toolbar>
+
 <div class="planning-container">
-    <h2>Calendar</h2>
-    <div class="calendar-event-section">
-      <div class="calendar">
-        <mat-calendar [(selected)]="selectedDate"></mat-calendar>
+  <div class="calendar-event-section">
+    <!-- Calendario a la izquierda -->
+    <div class="calendar">
+      <mat-calendar [(selected)]="selectedDate" (selectedChange)="onDateSelected($event)"></mat-calendar>
+    </div>
+
+    <!-- Detalles del evento a la derecha -->
+    <div class="events">
+      <h3>{{ month }}</h3>
+
+      <!-- Icono para agregar evento -->
+      <button mat-icon-button (click)="openEventForm()">
+        <mat-icon>add_circle</mat-icon>
+      </button>
+
+      <div *ngFor="let event of filteredEvents" class="event">
+        <div class="event-date">{{ event.date | date: 'dd' }}</div>
+        <div class="event-details">
+          <h4>{{ event.title }}</h4>
+          <p>Hora: {{ event.time }}</p>
+          <p>Descripción: {{ event.description }}</p>
+        </div>
       </div>
-  
-      <div class="events">
-        <h3>{{ month }}</h3>
-        <div *ngFor="let event of events" class="event">
-          <div class="event-date">{{ event.date | date: 'dd' }}</div>
-          <div class="event-details">
-            <h4>{{ event.title }}</h4>
-            <p>Hora: {{ event.time }}</p>
-            <p>Estado: {{ event.status }}</p>
-            <p *ngIf="event.details">{{ event.details }}</p>
+
+      <!-- Formulario para agregar evento dentro de un card -->
+      <div *ngIf="isFormVisible" class="add-event-form">
+        <div class="custom-card">
+          <div class="custom-card-header">
+            <h3>Agregar Evento</h3>
+          </div>
+          <div class="custom-card-content">
+            <form (ngSubmit)="addEvent()">
+              <div class="form-group">
+                <label for="eventTitle">Título:</label>
+                <input type="text" id="eventTitle" [(ngModel)]="newEvent.title" name="title" required />
+              </div>
+              <div class="form-group">
+                <label for="eventTime">Hora:</label>
+                <input type="time" id="eventTime" [(ngModel)]="newEvent.time" name="time" required />
+              </div>
+              <div class="form-group">
+                <label for="eventDescription">Descripción:</label>
+                <textarea id="eventDescription" [(ngModel)]="newEvent.description" name="description"></textarea>
+              </div>
+              <button type="submit">Agregar Evento</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+</body>
