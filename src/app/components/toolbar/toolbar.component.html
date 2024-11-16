@@ -11,8 +11,8 @@
   </div>
   <nav class="nav-options">
     <a routerLink="/monitoring">Monitoring</a>
-    <a *ngIf="userRole === 'admin'" routerLink="/reports">Reports</a>
-    <a *ngIf="userRole === 'admin'" routerLink="/planning">Planning</a>
+    <a routerLink="/reports">Reports</a>
+    <a routerLink="/planning">Planning</a>
   </nav>
 </header>
 <app-notification-panel #notificationPanel></app-notification-panel>

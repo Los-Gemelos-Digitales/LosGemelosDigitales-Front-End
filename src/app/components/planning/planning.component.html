@@ -13,7 +13,7 @@
       <h3>{{ month }}</h3>
 
       <!-- Icono para agregar evento -->
-      <button mat-icon-button (click)="openEventForm()">
+      <button mat-icon-button *ngIf="userRole === 'admin'" (click)="openEventForm()">
         <mat-icon>add_circle</mat-icon>
       </button>
 

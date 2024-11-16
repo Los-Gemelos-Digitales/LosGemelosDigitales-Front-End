@@ -9,6 +9,7 @@ import {MatCardModule} from '@angular/material/card';
 import {EvacuationPlansService} from '../../data/services/evacuation-plans/evacuation-plans.service';
 import {EvacuationPlans} from '../../data/models/evacuation-plans/evacuationPlans';
 import {MatIconButton} from '@angular/material/button';
+import {AuthService} from '../../shared/auth-service/auth.service';
 
 @Component({
   selector: 'app-planning',
@@ -19,6 +20,7 @@ import {MatIconButton} from '@angular/material/button';
 })
 export class PlanningComponent implements OnInit {
   @ViewChild(MatCalendar) calendar!: MatCalendar<Date>; // Referencia al calendario
+  userRole: string | null = null;
   selectedDate: Date = new Date(); // Fecha seleccionada
   month = ''; // Nombre del mes actual
   events: EvacuationPlans[] = []; // Lista de eventos de evacuación
@@ -26,11 +28,15 @@ export class PlanningComponent implements OnInit {
   isFormVisible = false; // Para controlar la visibilidad del formulario
   newEvent: any = {}; // Objeto para almacenar los datos del nuevo evento
 
-  constructor(private evacuationPlansService: EvacuationPlansService) {}
+  constructor(private evacuationPlansService: EvacuationPlansService, private authService: AuthService) {}
 
   ngOnInit() {
     this.updateMonthAndFilterEvents(this.selectedDate);
     this.loadEvacuationPlans(); // Cargar los planes de evacuación cuando se inicie el componente
+    const user = this.authService.getUser(); // Obtener el usuario desde el AuthService
+    if (user) {
+      this.userRole = user.role; // Asignar el username
+    }
   }
 
   ngAfterViewInit() {
