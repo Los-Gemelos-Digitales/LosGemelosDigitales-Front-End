@@ -25,4 +25,8 @@ export class ProfileComponent implements OnInit{
       this.email = user.email;
     }
   }
+
+  logout(): void {
+    this.authService.logout();
+  }
 }

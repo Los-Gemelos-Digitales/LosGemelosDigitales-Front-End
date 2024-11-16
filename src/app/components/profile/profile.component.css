@@ -1,17 +1,38 @@
 .profile-wrapper {
   display: flex;
+  flex-direction: column; /* Asegura que el botón de Log Out esté encima del contenedor */
   justify-content: center;
   align-items: center;
-  padding-top: 60px;
+  height: 100vh;
+  background-color: #f5deb3;
+  padding-top: 60px; 
 }
 
-.app-background {
-  background-color: #E6CA8A;
-  min-height: 100vh;
+.logout-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: #6b4f28;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.logout-container i {
+  font-size: 1.5rem;
+  margin-right: 5px;
+  color: #6b4f28;
+}
+
+.logout-container span {
+  color: #6b4f28;
 }
 
 .profile-container {
-  width: 360px;
+  width: 360px; 
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -37,13 +58,15 @@ h2 {
   margin-bottom: 5px;
 }
 
-.form-group span {
+.form-group input {
   padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   background-color: #eaeaea;
   color: #333;
   font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  outline: none;
+  cursor: not-allowed;
 }
 
 .form-row {
@@ -53,8 +76,8 @@ h2 {
 }
 
 .form-row .form-group {
-  flex: 1;
-  min-width: 0;
+  flex: 1; 
+  min-width: 0; 
 }
 
 .edit-profile-button {
