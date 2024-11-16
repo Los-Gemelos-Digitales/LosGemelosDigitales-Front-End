@@ -1,12 +1,25 @@
-
-.reports-container {
+/* Contenedor principal que contiene la tabla y el formulario */
+.main-container {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
   padding: 20px;
-  margin: 20px;
+}
+.add-report-container {
+  width: 300px;  /* Ancho fijo para el formulario */
+  margin-left: 20px; /* Separación de la tabla */
+}
+/* Estilos de la tabla */
+.reports-container {
+  flex: 1; /* Hace que la tabla ocupe todo el espacio disponible */
+  padding: 20px;
   background-color: #1E1E1E;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
+.action {
+  display: flex;
+  gap: 5px;
+}
 h2 {
   color: #F4511E; /* Color de seguridad */
   font-weight: bold;

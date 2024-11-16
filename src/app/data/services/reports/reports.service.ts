@@ -10,6 +10,7 @@ import {Reports} from '../../models/reports/reports';
 export class ReportsService {
   baseUrl = "http://localhost:3000/reports";
 
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -35,4 +36,16 @@ export class ReportsService {
     return this.http.post<Reports>(this.baseUrl, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
+  // Método para actualizar un elemento existente
+  updateItem(id: number, item: Partial<Reports>): Observable<Reports> {
+    return this.http.put<Reports>(`${this.baseUrl}/${id}`, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  // Método para eliminar un elemento por su ID
+  deleteItem(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
 }

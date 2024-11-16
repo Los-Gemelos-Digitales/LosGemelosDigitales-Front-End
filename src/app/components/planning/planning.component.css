@@ -23,10 +23,10 @@
   max-width: 500px; /* Máximo de 500px */
   max-height: 600px; /* Altura inicial para pantallas más grandes */
   margin-right: 20px;
-  background-color: #212121;
+  background-color: #429a7c;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(158, 171, 54, 0.8);
   flex: none;
   overflow: hidden;
 }
@@ -42,11 +42,7 @@
   font-size: 12px;
   color: #ffffff;
 }
-.mat-calendar-body-cell.event-day {
-  background-color: #4CAF50 !important; /* Color de fondo para los días con eventos */
-  color: white !important; /* Texto blanco */
-  border-radius: 50%; /* Forma circular del día */
-}
+
 .events {
   flex: 1;
   background-color: #FFEBC5;

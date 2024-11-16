@@ -38,22 +38,6 @@
   ],
   "reports": [
     {
-      "id": "1",
-      "admin_id": 1,
-      "type": "Fire",
-      "description": "Fire reported in the main building",
-      "date": "2024-11-10",
-      "place": "Main Building"
-    },
-    {
-      "id": "2",
-      "admin_id": 1,
-      "type": "Earthquake",
-      "description": "Earthquake drill conducted",
-      "date": "2024-11-05",
-      "place": "Office HQ"
-    },
-    {
       "id": "3",
       "admin_id": 1,
       "type": "Flood",
@@ -116,86 +100,6 @@
       "description": "Fire alarm triggered due to malfunction",
       "date": "2024-08-20",
       "place": "Storage Room"
-    },
-    {
-      "id": "11",
-      "admin_id": 1,
-      "type": "Earthquake",
-      "description": "Simulated earthquake evacuation drill",
-      "date": "2024-08-10",
-      "place": "Building 1"
-    },
-    {
-      "id": "12",
-      "admin_id": 1,
-      "type": "Flood",
-      "description": "Flooding in the basement after storm",
-      "date": "2024-07-28",
-      "place": "Basement"
-    },
-    {
-      "id": "13",
-      "admin_id": 1,
-      "type": "Fire",
-      "description": "Small fire caused by electrical fault",
-      "date": "2024-07-15",
-      "place": "Server Room"
-    },
-    {
-      "id": "14",
-      "admin_id": 1,
-      "type": "Earthquake",
-      "description": "Magnitude 4.5 earthquake felt",
-      "date": "2024-06-30",
-      "place": "Parking Lot"
-    },
-    {
-      "id": "15",
-      "admin_id": 1,
-      "type": "Flood",
-      "description": "Water leak in the west wing",
-      "date": "2024-06-20",
-      "place": "West Wing"
-    },
-    {
-      "id": "16",
-      "admin_id": 1,
-      "type": "Fire",
-      "description": "Burnt cables in the storage room",
-      "date": "2024-06-10",
-      "place": "Storage Room"
-    },
-    {
-      "id": "17",
-      "admin_id": 1,
-      "type": "Earthquake",
-      "description": "No major damage after the tremor",
-      "date": "2024-05-15",
-      "place": "All Floors"
-    },
-    {
-      "id": "18",
-      "admin_id": 1,
-      "type": "Flood",
-      "description": "Water damage in the office lobby",
-      "date": "2024-05-10",
-      "place": "Lobby"
-    },
-    {
-      "id": "19",
-      "admin_id": 1,
-      "type": "Fire",
-      "description": "Fire extinguisher needed in the kitchen",
-      "date": "2024-04-25",
-      "place": "Kitchen"
-    },
-    {
-      "id": "20",
-      "admin_id": 1,
-      "type": "Earthquake",
-      "description": "Training for emergency protocols during earthquake",
-      "date": "2024-04-15",
-      "place": "Training Room"
     }
   ],
   "evacuation_plans": [
@@ -226,6 +130,20 @@
       "id": "ec52",
       "date": "2024-12-07T05:00:00.000Z",
       "title": "ss"
+    },
+    {
+      "id": "8d51",
+      "date": "2024-11-09T05:00:00.000Z",
+      "title": "asdad",
+      "time": "00:08",
+      "description": "asdas"
+    },
+    {
+      "id": "b579",
+      "date": "2024-11-13T05:00:00.000Z",
+      "title": "asdasd",
+      "time": "11:07",
+      "description": "ad"
     }
   ]
 }

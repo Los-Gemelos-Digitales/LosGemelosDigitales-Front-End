@@ -8,13 +8,14 @@ import {FormsModule} from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {EvacuationPlansService} from '../../data/services/evacuation-plans/evacuation-plans.service';
 import {EvacuationPlans} from '../../data/models/evacuation-plans/evacuationPlans';
+import {MatIconButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-planning',
   standalone: true,
   templateUrl: './planning.component.html',
   styleUrls: ['./planning.component.css'],
-  imports: [MatDatepickerModule, MatNativeDateModule, CommonModule, ToolbarComponent, MatIconModule, FormsModule, MatCardModule] // Añade CommonModule a los imports
+  imports: [MatDatepickerModule, MatNativeDateModule, CommonModule, ToolbarComponent, MatIconModule, FormsModule, MatCardModule, MatIconButton] // Añade CommonModule a los imports
 })
 export class PlanningComponent implements OnInit {
   @ViewChild(MatCalendar) calendar!: MatCalendar<Date>; // Referencia al calendario

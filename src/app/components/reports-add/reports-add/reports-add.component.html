@@ -1,0 +1,41 @@
+<div class="form-container">
+  <h1>Reports Form</h1>
+  <form class="report-form" [formGroup]="reportForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <label for="admin_id">Admin ID</label>
+      <input type="text" id="admin_id" formControlName="admin_id" placeholder="Enter Admin" required />
+    </div>
+
+    <div class="form-group">
+      <label for="type">Type</label>
+      <select id="type" formControlName="type" required>
+        <option value="fire">Fire</option>
+        <option value="earthquake">Earthquake</option>
+        <option value="flood">Flood</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" placeholder="Enter report description" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" id="date" formControlName="date" required />
+    </div>
+
+    <div class="form-group">
+      <label for="place">Place</label>
+      <input type="text" id="place" formControlName="place" placeholder="Enter place" required />
+    </div>
+
+    <div class="form-actions">
+      <button type="reset" class="cancel-btn">Cancel</button>
+      <button type="submit" class="submit-btn">Save</button>
+    </div>
+  </form>
+</div>
+
+
