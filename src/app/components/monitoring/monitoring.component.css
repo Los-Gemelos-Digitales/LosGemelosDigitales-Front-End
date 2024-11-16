@@ -1,51 +1,50 @@
 .monitoring-container {
-  text-align: center;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
-  background-color: #E6CA8A; /* Fondo del componente */
-  padding: 20px;
-  border-radius: 10px;
 }
 
+.monitoring-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
 
-.status-display {
+.monitoring-container div {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  background-color: #996B12;
-  padding: 20px;
-  border-radius: 10px;
+  margin-top: 20px;
 }
 
-.map-image {
-  width: 60%;
-  max-width: 500px;
-  border-radius: 10px;
+.monitoring-container iframe {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  height: 600px;
 }
 
-.alert-indicator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  background-color: #d8b882;
-  border-radius: 10px;
-  max-width: 200px;
+.monitoring-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.teacher-icon {
-  width: 200px;
-  height: 270px; /* Ajusta este valor según tus necesidades */
-  margin-bottom: 10px;
+.monitoring-container button:hover {
+  background-color: #45a049;
 }
 
-
-@media (max-width: 768px) {
-  .status-display {
-    flex-direction: column;
-  }
-
-  .map-image {
-    width: 100%;
-    max-width: none;
-  }
+.monitoring-container .button-container {
+  text-align: center;
+  margin-bottom: 30px;
 }

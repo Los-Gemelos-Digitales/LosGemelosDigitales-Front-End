@@ -118,32 +118,6 @@
       "title": "Earthquake Evacuation Plan",
       "time": "2:00 PM",
       "description": "Earthquake evacuation for HQ building"
-    },
-    {
-      "id": "e0af",
-      "date": "2024-11-09T05:00:00.000Z",
-      "title": "Hola",
-      "time": "05:30",
-      "description": "Dormir"
-    },
-    {
-      "id": "ec52",
-      "date": "2024-12-07T05:00:00.000Z",
-      "title": "ss"
-    },
-    {
-      "id": "8d51",
-      "date": "2024-11-09T05:00:00.000Z",
-      "title": "asdad",
-      "time": "00:08",
-      "description": "asdas"
-    },
-    {
-      "id": "b579",
-      "date": "2024-11-13T05:00:00.000Z",
-      "title": "asdasd",
-      "time": "11:07",
-      "description": "ad"
     }
   ]
 }
