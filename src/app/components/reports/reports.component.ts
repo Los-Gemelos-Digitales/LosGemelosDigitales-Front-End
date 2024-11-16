@@ -23,27 +23,35 @@ import {HomeComponent} from '../../home/home.component';
   styleUrls: ['./reports.component.css']
 })
 export class ReportsComponent implements OnInit{
-  reports: Reports[] = []; // Definir reports como un arreglo de objetos Reports
+  reports: Reports[] = [];
   displayedColumns: string[] = ['type', 'description', 'date', 'place', 'details', 'action'];
 
   constructor(private reportService: ReportsService) {}
 
   ngOnInit(): void {
-    this.getList(); // Obtener los reportes al inicializar
+    this.getList();
   }
 
   getList() {
-    this.reportService.getList().subscribe(data => {
-      this.reports = data;
+    this.reportService.getList().subscribe({
+      next: (data) => {
+        this.reports = data;
+      },
+      error: console.log,
     });
   }
+
   deleteReport(id: number) {
     this.reportService.deleteItem(id).subscribe({
-      next: (res) => {
+      next: () => {
         this.getList();
       },
       error: console.log,
     });
   }
 
+  // Método que se llama cuando se recibe el evento desde ReportsAddComponent
+  onReportAdded() {
+    this.getList();
+  }
 }

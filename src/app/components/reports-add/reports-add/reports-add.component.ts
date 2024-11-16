@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
 import {
   MAT_DIALOG_DATA,
   MatDialogActions,
@@ -51,9 +51,13 @@ import {ReportsService} from '../../../data/services/reports/reports.service';
   styleUrl: './reports-add.component.css'
 })
 export class ReportsAddComponent implements OnInit{
+  @Output() reportAdded = new EventEmitter<void>();
   reportForm: FormGroup;
 
-  constructor(private _fb: FormBuilder, private _repService: ReportsService) {
+  constructor(
+    private _fb: FormBuilder,
+    private _repService: ReportsService
+  ) {
     this.reportForm = this._fb.group({
       admin_id: [''],
       type: ['', [Validators.required]],
@@ -63,23 +67,19 @@ export class ReportsAddComponent implements OnInit{
     });
   }
 
-  ngOnInit(): void {
-    this._repService.getList();
-  }
+  ngOnInit(): void {}
 
   onFormSubmit() {
     if (this.reportForm.valid) {
       const report = this.reportForm.value;
 
-      // Llamamos al servicio para crear el reporte, sin preocuparnos por el ID
       this._repService.createItem(report).subscribe({
-        next: (createdReport) => {
+        next: () => {
           alert('Report added successfully!');
-          console.log('Created report:', createdReport); // El reporte ya tiene un ID asignado
-          this._repService.getList(); // Actualizamos la lista de reportes
-          this.reportForm.reset(); // Limpiamos el formulario
+          this.reportForm.reset(); // Limpiar el formulario
+          this.reportAdded.emit(); // Emitir el evento para notificar que se creó un reporte
         },
-        error: (err: any) => {
+        error: (err) => {
           console.error('Error adding report:', err);
           alert('An error occurred. Please try again.');
         },

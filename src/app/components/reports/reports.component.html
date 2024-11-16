@@ -54,9 +54,10 @@
     </table>
   </div>
 
-  <!-- Formulario a la derecha de la tabla -->
+
+  <!-- Formulario integrado -->
   <div class="add-report-container">
-    <app-reports-add></app-reports-add>
+    <app-reports-add (reportAdded)="onReportAdded()"></app-reports-add>
   </div>
 </div>
 </body>
