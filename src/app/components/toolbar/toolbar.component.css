@@ -1,59 +1,85 @@
+/* General styling for the header */
 .app-toolbar {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  background-color: #C28C0F; 
+  background-color: #C28C0F; /* Azul oscuro */
+  color: #ecf0f1; /* Blanco suave */
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
 }
 
+/* Top section styling */
 .top-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  padding: 10px 0;
 }
 
+/* Brand section styling */
 .brand-section {
   display: flex;
   align-items: center;
 }
 
 .brand-logo {
-  height: 80px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #ecf0f1;
 }
 
 .app-name {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
+  color: #000000;
 }
 
-.nav-options {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 10px; 
-}
-
-.nav-options a {
-  margin-right: 15px; 
-  text-decoration: none;
-  color: #000;
-  cursor: pointer; 
-}
-
+/* Profile section styling */
 .profile-section {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: space-between; 
-  height: 100%;
-}
-
-.profile-icon,
-.notification-icon {
-  height: 30px; 
-  margin-bottom: 30px;
+  align-items: center;
+  gap: 15px;
 }
 
 .profile-section i {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
+  color: #ecf0f1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile-section i:hover {
+  color: #3498db; /* Azul claro */
+}
+
+/* Navigation options styling */
+.nav-options {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #695325; /* Gris azulado */
+  padding: 10px 0;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.nav-options a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 5px 15px;
+  border-radius: 3px;
+}
+
+.nav-options a:hover {
+  color: #2c3e50; /* Fondo principal */
+  background-color: #ecf0f1; /* Texto claro */
+}
+
+/* Notification panel */
+app-notification-panel {
+  margin-top: 10px;
 }
