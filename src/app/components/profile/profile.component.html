@@ -1,12 +1,19 @@
 <body class="app-background">
-  <app-toolbar></app-toolbar>
+<app-toolbar></app-toolbar>
 
-  <div class="profile-wrapper">
-    <div class="profile-container">
+<div class="profile-wrapper">
+  <div class="profile-container">
+    <div class="title-logout-container">
       <h2>User Profile</h2>
-      <div class="form-group">
-        <label for="username">First and Last Name:</label>
-        <span id="username">{{ username || 'N/A' }}</span>
+        <div class="logout-container" (click)="logout()">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Log Out</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+      <label for="username">First and Last Name:</label>
+      <span id="username">{{ username || 'N/A' }}</span>
     </div>
 
     <div class="form-group">
@@ -36,17 +43,18 @@
       </div>
 
       <div class="form-group">
-          <label for="phone">Phone:</label>
-          <span id="phone">N/A</span>
-        </div>
+        <label for="phone">Phone:</label>
+        <span id="phone">N/A</span>
       </div>
-
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <span id="password">********</span>
-      </div>
-
-      <button class="edit-profile-button" type="button">Edit Profile</button>
     </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <span id="password">********</span>
+    </div>
+
+    <button class="edit-profile-button" type="button">Edit Profile</button>
   </div>
+</div>
 </body>
+

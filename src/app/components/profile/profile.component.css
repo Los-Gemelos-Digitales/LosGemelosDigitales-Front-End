@@ -18,11 +18,31 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.title-logout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 h2 {
   text-align: left;
   color: #000;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.logout-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #6b4f28;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.logout-container i {
+  margin-right: 5px;
+  font-size: 16px;
 }
 
 .form-group {
