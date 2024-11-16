@@ -59,7 +59,7 @@ export class ReportsAddComponent implements OnInit{
     private _repService: ReportsService
   ) {
     this.reportForm = this._fb.group({
-      admin_id: [1],
+      adminId: [1],
       type: ['', [Validators.required]],
       description: ['', [Validators.required]],
       detail: ['', [Validators.required]],
