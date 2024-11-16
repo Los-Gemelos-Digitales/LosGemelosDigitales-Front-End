@@ -1,12 +1,10 @@
-/* src/app/app.component.css */
-:host {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  
-  router-outlet {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+app-background {
+  background-color: #E6CA8A;
+  min-height: 100vh;
+
+}
