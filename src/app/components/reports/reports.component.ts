@@ -12,6 +12,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {HomeComponent} from '../../home/home.component';
 import {ReportsDetailsComponent} from '../reports-details/reports-details.component';
+import {MatFormField, MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {MatInput, MatInputModule} from '@angular/material/input';
 
 @Component({
   selector: 'app-reports',
@@ -19,13 +22,14 @@ import {ReportsDetailsComponent} from '../reports-details/reports-details.compon
   imports: [CommonModule, ToolbarComponent, MatTableModule,
     MatButtonModule, MatIconModule, MatDatepickerModule,
     MatNativeDateModule, MatDialogModule,
-      HomeComponent, ReportsAddComponent],
+    HomeComponent, ReportsAddComponent, MatFormFieldModule, FormsModule, MatInputModule],
   templateUrl: './reports.component.html',
   styleUrls: ['./reports.component.css']
 })
 export class ReportsComponent implements OnInit{
   reports: Reports[] = [];
-  displayedColumns: string[] = ['type', 'description', 'date', 'place', 'details', 'action'];
+  displayedColumns: string[] = ['index', 'type', 'description', 'date', 'place', 'details', 'action'];
+  searchType: string = '';  // Variable para almacenar el tipo de búsqueda
 
   constructor(private reportService: ReportsService, private _matDialog: MatDialog) {}
 
@@ -43,19 +47,39 @@ export class ReportsComponent implements OnInit{
   getList() {
     this.reportService.getList().subscribe({
       next: (data) => {
-        this.reports = data;
+        console.log('Reports received: ', data);  // Verifica los datos
+        this.reports = data;  // Actualiza la lista de reportes
       },
-      error: console.log,
+      error: (err) => {
+        console.log('Error fetching reports:', err);
+      },
     });
   }
 
   deleteReport(id: number) {
-    this.reportService.deleteItem(id).subscribe({
-      next: () => {
-        this.getList();
+    this.reportService.deleteReport(id).subscribe({
+      next: (response) => {
+        console.log('Delete response:', response);  // Aquí puedes revisar la respuesta completa
+        if (response.status === 200) {
+          this.getList();  // Recargar la lista de reportes
+        } else {
+          alert('Failed to delete the report.');
+        }
       },
-      error: console.log,
+      error: (err) => {
+        console.error('Error during deletion:', err);
+        alert('Failed to delete the report.');
+      }
     });
+  }
+  searchReports() {
+    if (this.searchType) {
+      this.reports = this.reports.filter(report =>
+        report.type.toLowerCase().includes(this.searchType.toLowerCase())
+      );
+    } else {
+      this.getList();  // Si no hay búsqueda, carga todos los reportes nuevamente
+    }
   }
 
   // Método que se llama cuando se recibe el evento desde ReportsAddComponent

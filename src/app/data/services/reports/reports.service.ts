@@ -41,8 +41,7 @@ export class ReportsService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  deleteItem(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}/${id}`, this.httpOptions)
-      .pipe(retry(2), catchError(this.handleError));
+  deleteReport(id: number) {
+    return this.http.delete(`http://localhost:8080/api/v1/reports/${id}`, { observe: 'response' });
   }
 }

@@ -1,3 +1,15 @@
+/* Contenedor de búsqueda */
+.search-container {
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #1E1E1E;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Contenedor principal que contiene la tabla y el formulario */
 .main-container {
   display: flex;
