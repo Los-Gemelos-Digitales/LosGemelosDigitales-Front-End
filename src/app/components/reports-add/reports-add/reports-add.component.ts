@@ -59,9 +59,10 @@ export class ReportsAddComponent implements OnInit{
     private _repService: ReportsService
   ) {
     this.reportForm = this._fb.group({
-      admin_id: [''],
+      admin_id: [1],
       type: ['', [Validators.required]],
       description: ['', [Validators.required]],
+      detail: ['', [Validators.required]],
       date: ['', [Validators.required]],
       place: ['', [Validators.required]],
     });
@@ -76,8 +77,8 @@ export class ReportsAddComponent implements OnInit{
       this._repService.createItem(report).subscribe({
         next: () => {
           alert('Report added successfully!');
-          this.reportForm.reset(); // Limpiar el formulario
-          this.reportAdded.emit(); // Emitir el evento para notificar que se creó un reporte
+          this.reportForm.reset({ admin_id: 1 }); // Reiniciar con admin_id predeterminado
+          this.reportAdded.emit(); // Emitir evento para notificar que se creó un reporte
         },
         error: (err) => {
           console.error('Error adding report:', err);

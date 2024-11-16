@@ -1,10 +1,6 @@
 <div class="form-container">
   <h1>Reports Form</h1>
   <form class="report-form" [formGroup]="reportForm" (ngSubmit)="onFormSubmit()">
-    <div class="form-group">
-      <label for="admin_id">Admin ID</label>
-      <input type="text" id="admin_id" formControlName="admin_id" placeholder="Enter Admin" required />
-    </div>
 
     <div class="form-group">
       <label for="type">Type</label>
@@ -19,6 +15,11 @@
     <div class="form-group">
       <label for="description">Description</label>
       <textarea id="description" formControlName="description" placeholder="Enter report description" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="detail">Details</label>
+      <textarea id="detail" formControlName="detail" placeholder="Enter report details" required></textarea>
     </div>
 
     <div class="form-group">

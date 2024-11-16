@@ -35,7 +35,7 @@
       <ng-container matColumnDef="details">
         <th mat-header-cell *matHeaderCellDef> DETAILS </th>
         <td mat-cell *matCellDef="let report">
-          <button mat-button class="details-button">SEE DETAILS</button>
+          <button mat-raised-button color="primary" (click)="openDetails(report)">SEE DETAILS</button>
         </td>
       </ng-container>
 

@@ -1,0 +1,12 @@
+<div class="details-modal">
+  <h2>Report Details</h2>
+  <p><strong>Type:</strong> {{ data.type }}</p>
+  <p><strong>Description:</strong> {{ data.description }}</p>
+  <p><strong>Date:</strong> {{ data.date }}</p>
+  <p><strong>Place:</strong> {{ data.place }}</p>
+  <p><strong>Details:</strong> {{ data.detail || 'N/A' }}</p>
+
+  <div class="actions">
+    <button mat-button (click)="_matDialogRef.close()">Close</button>
+  </div>
+</div>
