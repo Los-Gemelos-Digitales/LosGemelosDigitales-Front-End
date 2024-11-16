@@ -48,6 +48,7 @@ export class PlanningComponent implements OnInit {
   // Cargar los planes de evacuación desde la API
   loadEvacuationPlans() {
     this.evacuationPlansService.getList().subscribe((plans) => {
+      console.log('Datos recibidos del backend:', plans); // Verifica los datos
       this.events = plans;
       this.updateMonthAndFilterEvents(this.selectedDate); // Filtrar eventos según el mes actual
     });

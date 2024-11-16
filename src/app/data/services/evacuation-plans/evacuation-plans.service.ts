@@ -8,7 +8,7 @@ import {EvacuationPlans} from '../../models/evacuation-plans/evacuationPlans';
   providedIn: 'root'
 })
 export class EvacuationPlansService {
-  baseUrl = "http://localhost:3000/evacuation_plans";
+  baseUrl = "http://localhost:8080/api/v1/evacuation-plans";
 
   httpOptions = {
     headers: new HttpHeaders({
