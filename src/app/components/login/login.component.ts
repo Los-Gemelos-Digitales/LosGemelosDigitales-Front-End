@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../shared/auth-service/auth.service';
-import {Route, Router} from '@angular/router';
+import {Route, Router, RouterLink} from '@angular/router';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {UserService} from '../../data/services/users/user.service';
 import {catchError, of} from 'rxjs';
@@ -10,7 +10,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [FormsModule, ReactiveFormsModule, HttpClientModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
