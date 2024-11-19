@@ -7,7 +7,7 @@ import {Users} from '../../models/users/user';
   providedIn: 'root'
 })
 export class UserService {
-  baseUrl = "http://localhost:8080/api/v1/users";
+  baseUrl = "https://clever-vibrancy-production.up.railway.app/api/v1/users";
 
   httpOptions = {
     headers: new HttpHeaders({

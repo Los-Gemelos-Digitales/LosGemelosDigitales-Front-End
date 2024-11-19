@@ -8,7 +8,7 @@ import {Reports} from '../../models/reports/reports';
   providedIn: 'root'
 })
 export class ReportsService {
-  baseUrl = "http://localhost:8080/api/v1/reports"; // Cambié el puerto a 8080 y la URL base
+  baseUrl = "https://clever-vibrancy-production.up.railway.app/api/v1/reports"; // Cambié el puerto a 8080 y la URL base
 
   httpOptions = {
     headers: new HttpHeaders({
